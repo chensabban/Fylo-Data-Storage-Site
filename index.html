@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;600&display=swap" rel="stylesheet">
+    <script src="app.js"></script>     
+    <title>Fylo data storage component</title>
+</head>
+
+<body>
+    <div class="components">
+
+        <div class= "first_component">
+            <img class ="header__logo" src="./assets/logo.svg"/>
+            <div class="icons">
+                <button id="icon-1"><img class="icon_pic-1" src="./assets/icon-document.svg"></button>
+                <button id="icon-2" onclick="uploadFile()"><img class="icon_pic-2" src="./assets/icon-folder.svg"></button>
+                <button id="icon-3"><img class="icon_pic-3" src="./assets/icon-upload.svg"></button>
+            </div>
+            <input id="file-input" type="file" onchange="onFileSelected()" multiple>
+        </div>
+
+        <div class= "second_component">
+            <div class="MB_left"><span id ="remaining_MB" content="815">1000</span> <span class="text_MB">MB Left</span></div>
+            <div class ="triangle"></div>
+            <div class ="container_progress">
+                <div class="Subheading">You’ve used <span id ="total_MB">0 MB </span>of your storage</div>
+                <div class="progress_bar">
+                    <div id="progress-precent"></div>
+                    <div class="progress-point"></div>
+                    <span class="progress-remaining"></span>
+                </div>
+                <div class="max_min">
+                    <div class="min_MB">0 MB</div>
+                    <div class="max_MB">1000 MB</div>
+                </div>
+            </div>         
+        </div>
+    </div>
+    <img class="background_photo" src="./assets/bg-desktop.png"/>
+</body>
+</html>
